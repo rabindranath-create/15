@@ -24,7 +24,7 @@ writeLines("test", file.path(output_dir, "test.txt"))
 source("RD_and_DT_Algorithm_copy.R")  # Ensure this file is in the same directory
 
 lambda <- 2
-
+cost <- 5
 
 
 
