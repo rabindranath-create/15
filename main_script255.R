@@ -26,7 +26,7 @@ source("RD_and_DT_Algorithm_copy.R")  # Ensure this file is in the same director
 lambda <- 2
 
 
-
+cost <- 5
 
 results_5 <- data.frame(
   Run = integer(),
