@@ -48,7 +48,7 @@ for (i in 1:100) {
     Cost = result$Cost_total,
     NumDisambigs = length(result$Disambiguate_state)
     
-  }
+  )
 }
 
 saveRDS(results_1, file.path(output_dir, "data_25_1_1.rds"))
@@ -81,7 +81,7 @@ for (i in 1:100) {
     Cost = result$Cost_total,
     NumDisambigs = length(result$Disambiguate_state)
     
-  }
+  )
 }
 
 saveRDS(results_2, file.path(output_dir, "data_25_1_2.rds"))
@@ -92,62 +92,6 @@ saveRDS(results_2, file.path(output_dir, "data_25_1_2.rds"))
 
 
 
-
-
-results_3 <- data.frame(
-  Run = integer(),
-  N_t = integer(),
-  Length = numeric(),
-  Cost = numeric(),
-  NumDisambigs = integer()
-)
-
-
-for (i in 1:100) {
-  set.seed(400+i)
-  obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 150, no_c = 75, no_o = 75)
-  result <- MACS_Alg_M(obs_gen_para, kappa = 7, lambda, cost)
-
-  results_3[i, ] <- list(
-    Run = i
-    N_t = 75,
-    Length = result$Length_total,
-    Cost = result$Cost_total,
-    NumDisambigs = length(result$Disambiguate_state)
-    
-  }
-}
-
-saveRDS(results_3, file.path(output_dir, "data_25_1_3.rds"))
-
-
-
-
-results_4 <- data.frame(
-  Run = integer(),
-  N_t = integer(),
-  Length = numeric(),
-  Cost = numeric(),
-  NumDisambigs = integer()
-)
-
-
-for (i in 1:100) {
-  set.seed(400+i)
-  obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 175, no_c = 75, no_o = 100)
-  result <- MACS_Alg_M(obs_gen_para, kappa = 7, lambda, cost)
-
-  results_4[i, ] <- list(
-    Run = i
-    N_t = 100,
-    Length = result$Length_total,
-    Cost = result$Cost_total,
-    NumDisambigs = length(result$Disambiguate_state)
-    
-  }
-}
-
-saveRDS(results_4, file.path(output_dir, "data_25_1_4.rds"))
 
 
 
