@@ -2000,23 +2000,6 @@ TACS_Alg_M<- function(obs_gen_para, alpha, lambda, cost = 5){
 ################
 #MACS
 #######
-rm(list = ls())        # clear variables
-graphics.off()         # clear plots
-cat("\014")            # clear console (in RStudio)
-gc()                   # trigger garbage collection
-
-library(dplyr)
-library(ggplot2)
-
-#Set Working Directory to Source File Location
-library("rstudioapi") # Load rstudioapi package
-setwd(dirname(getActiveDocumentContext()$path)) # Set working directory to source file location
-getwd() # Check updated working directory
-
-
-
-
-
 
 
 
