@@ -48,7 +48,7 @@ for (i in 1:100) {
     Cost = result$Cost_total,
     NumDisambigs = length(result$Disambiguate_state)
     
-  }
+  )
 }
 
 saveRDS(results_1, file.path(output_dir, "data_25_1_1.rds"))
@@ -81,7 +81,7 @@ for (i in 1:100) {
     Cost = result$Cost_total,
     NumDisambigs = length(result$Disambiguate_state)
     
-  }
+  )
 }
 
 saveRDS(results_2, file.path(output_dir, "data_25_1_2.rds"))
