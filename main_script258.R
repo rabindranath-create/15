@@ -43,7 +43,7 @@ for (i in 1:100) {
   result <- MACS_Alg_M(obs_gen_para, kappa = 7, lambda, cost)
 
   results_8[i, ] <- list(
-    Run = i
+    Run = i,
     N_t = 200,
     Length = result$Length_total,
     Cost = result$Cost_total,
