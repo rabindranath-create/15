@@ -74,7 +74,7 @@ for (i in 1:100) {
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 75, no_c = 25, no_o = 50)
   result <- MACS_Alg_M(obs_gen_para, kappa = 7, lambda, cost)
 
-  results_1[i, ] <- list(
+  results_2[i, ] <- list(
     Run = i,
     N_t = 50,
     Length = result$Length_total,
